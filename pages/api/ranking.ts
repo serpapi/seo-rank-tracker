@@ -26,7 +26,7 @@ export default async function handler(
         location: req.query['location'],
         google_domain: 'google.com',
         num: 100,
-        api_key: 'aea237118285025a3faef7ffdc5f2dea48077cae5279f5c544dfc3f29c4ad9c4'
+        api_key: process.env.NEXT_SERPAPI_API_KEY
       }
     });
     res.status(200).json({ position: response.data })
